@@ -14,6 +14,5 @@ class App {
                         || email.endsWith("hotmail.com"))
                 .count();
     }
-    }
 }
 // END
