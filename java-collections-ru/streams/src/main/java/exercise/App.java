@@ -8,9 +8,9 @@ class App {
 
     public int getCountOfFreeEmails(List<String> list) {
         return (int) list.stream()
-                .filter(StringUtils::isNotBlank(list))
-                .filter(email -> email.endsWith("gmail.com") || email.endsWith("yandex.ru")
-                        || email.endsWith("hotmail.com"))
+                .filter(list -> StringUtils.isNotBlank(list))
+                .filter(list -> list.endsWith("gmail.com") || list.endsWith("yandex.ru")
+                        || list.endsWith("hotmail.com"))
                 .count();
     }
 }
