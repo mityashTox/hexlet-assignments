@@ -2,7 +2,6 @@ package exercise;
 
 import java.util.List;
 import java.util.Arrays;
-import org.apache.commons.lang3.StringUtils;
 
 // BEGIN
 class App {
