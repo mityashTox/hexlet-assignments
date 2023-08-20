@@ -3,7 +3,6 @@ package exercise;
 import org.apache.commons.lang3.StringUtils;
 import java.util.List;
 
-// BEGIN
 class App {
     public static int getCountOfFreeEmails(List<String> emailsList) {
         return (int) emailsList.stream()
@@ -13,4 +12,3 @@ class App {
                 .count();
     }
 }
-// END
