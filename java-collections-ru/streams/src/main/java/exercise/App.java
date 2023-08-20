@@ -1,14 +1,17 @@
 package exercise;
 
-import org.apache.commons.lang3.StringUtils;
 import java.util.List;
+import org.apache.commons.lang3.StringUtils;
 
+// BEGIN
 class App {
-    public static int getCountOfFreeEmails(List<String> emailsList) {
-        return (int) emailsList.stream()
+
+    public int getCountOfFreeEmails(List<String> list) {
+        return (int) list.stream()
                 .filter(StringUtils::isNotBlank)
                 .filter(email -> email.endsWith("gmail.com") || email.endsWith("yandex.ru")
                         || email.endsWith("hotmail.com"))
                 .count();
     }
 }
+// END
