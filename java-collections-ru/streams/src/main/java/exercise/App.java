@@ -6,7 +6,7 @@ import org.apache.commons.lang3.StringUtils;
 // BEGIN
 class App {
 
-    public int getCountOfFreeEmails(List<String> lists) {
+    public static int getCountOfFreeEmails(List<String> lists) {
         return (int) lists.stream()
                 .filter(list -> StringUtils.isNotBlank(list))
                 .filter(list -> list.endsWith("gmail.com") || list.endsWith("yandex.ru")
