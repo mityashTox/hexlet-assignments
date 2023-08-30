@@ -8,7 +8,7 @@ import java.util.stream.Stream;
 public class App {
     public static String getForwardedVariables(String config) {
         StringBuilder sb = new StringBuilder();
-        String[] arrayOfConfigElements = config.split("\n");
+        String[] arrayOfConfigElements = config.replaceAll("\"", "").split("\n");
         for (String line : arrayOfConfigElements) {
             if (line.startsWith("environment")) {
                 Arrays.stream((line.substring(12).split(",")))
